@@ -9,12 +9,15 @@ def fibs (n) #Non-recursive
 		if i == 0
 			fib_no << 0
 		else
-			fib_no << (i + (i - 1))
+			fib_no << (i + fib_seq[i - 1])
 		end
 	end
 	fib_seq
 end
 
-def fibs_rec #Recursive	
-
+def fibs_rec (n) #Recursive	
+	n == 0 ? fib_seq << 0 : fib_seq << n + (fibs_rec(n-1))
 end
+
+fibs (5) 		#=> 5
+fibs_rec(5)		#=> 5
