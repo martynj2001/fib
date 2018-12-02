@@ -1,4 +1,5 @@
 # Fibonacci Function - The Odin Project Ruby recursion lessons.
+# Now updated on mac mini - ready for testing.
 
 def fibs (n) #Non-recursive
 
