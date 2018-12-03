@@ -8,17 +8,25 @@ def fibs (n) #Non-recursive
 	fib_seq = []
 	(0..n).each do |i|
 		if i == 0
-			fib_no << 0
+			fib_seq << 0
+		elsif i == 1
+			fib_seq << 1
 		else
-			fib_no << (i + fib_seq[i - 1])
+			fib_seq << fib_seq[i-2] + fib_seq[i-1]
 		end
 	end
-	fib_seq
+	fib_seq[n]
 end
 
-def fibs_rec (n) #Recursive	
-	n == 0 ? fib_seq << 0 : fib_seq << n + (fibs_rec(n-1))
-end
+#def fibs_rec (n) #Recursive	
+#	fib_seq = []
+#	if n = 0
+#		fib_seq << 0
+#	else
+#
+#	end
+#end
 
-fibs (5) 		#=> 5
-fibs_rec(5)		#=> 5
+puts fibs (5) 
+puts fibs (6)		#=> 5
+# puts fibs_rec(5)		#=> 5
