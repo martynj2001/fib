@@ -15,18 +15,18 @@ def fibs (n) #Non-recursive
 			fib_seq << fib_seq[i-2] + fib_seq[i-1]
 		end
 	end
-	fib_seq[n]
+	fib_seq
 end
 
-#def fibs_rec (n) #Recursive	
-#	fib_seq = []
-#	if n = 0
-#		fib_seq << 0
-#	else
-#
-#	end
-#end
+def fibs_rec (seq, n) #Recursive	
+	
+	if n == 0
+		seq << 0
+	else
+		seq = fibs_rec(seq, n-1)
+		seq.length < 2 ? seq << 1 : seq << seq[n-2] + seq [n-1]
+	end
+end
 
-puts fibs (5) 
-puts fibs (6)		#=> 5
-# puts fibs_rec(5)		#=> 5
+seq = []
+puts fibs_rec seq, 8 #=> [0,1,1,2,3,5,8,13,21]
