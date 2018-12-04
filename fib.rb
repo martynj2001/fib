@@ -18,7 +18,7 @@ def fibs (n) #Non-recursive
 	fib_seq
 end
 
-def fibs_rec (seq, n) #Recursive	
+def fibs_rec (seq, n) #Recursive   	
 	
 	if n == 0
 		seq << 0
